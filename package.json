@@ -1,0 +1,20 @@
+{
+  "name": "nobo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e html,js,css ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennazenk/nobo.git"
+  },
+  "author": "Jenna Zenk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennazenk/nobo/issues"
+  },
+  "homepage": "https://github.com/jennazenk/nobo#readme"
+}
