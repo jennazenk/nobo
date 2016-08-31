@@ -38,7 +38,7 @@ app.use(function(req, res, next) {
 	}
 })
 
-var validFrontendRoutes = ['/', '/checkout', '/thankyou'];
+var validFrontendRoutes = ['/', '/offer'];
 var indexPath = path.join(__dirname, '..', 'browser', 'index.html');
 validFrontendRoutes.forEach(function(stateRoute) {
 	app.get(stateRoute, function(req, res) {
