@@ -5,97 +5,22 @@
     <title>NOBO</title>
     <base href="/">
     <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="stylesheets/bootstrap-dark.css" rel="stylesheet" />
+    <!-- <link href="stylesheets/bootstrap-dark.css" rel="stylesheet" /> -->
     <link href="stylesheets/stylesheet.css" rel="stylesheet" />
     <script src="/angular/angular.js" defer></script>
     <script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
     <script src="/angular-messages/angular-messages.js" defer></script>
     <script src="/js/module.js" defer></script>
+
     <!-- Script for states, controllers and factories -->
-    <!--     <script src="/js/login/login.state.js" defer></script>
-    <script src="/js/login/login.controller.js" defer></script>
-    <script src="/js/login/auth.factory.js" defer></script>
-    <script src="/js/phoneNumber/phoneNumber.state.js" defer></script>
-    <script src="/js/phoneNumber/phoneNumber.controller.js" defer></script>
-    <script src="js/common/contenteditable.directive.js" defer></script>
-    <script src="/js/card/card.state.js" defer></script>
-    <script src="/js/card/card.controller.js" defer></script>
-    <script src="/js/card/card.factory.js" defer></script>
-    <script src="/js/rewardButton/rewardButton.directive.js" defer></script>
-    <script src="/js/rewardButton/reward.factory.js" defer></script> -->
+    <script src="/js/offer/offer.state.js" defer></script>
+    <script src="/js/offer/offer.factory.js" defer></script>
+    <script src="/js/offer/offer.controller.js" defer></script>
+ 
 </head>
 
 <body ng-app="nobo">
-    <h1></h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <h2 id="becentered">L`OFFRE NOBO</h2>
-            </div>
-            <div class="col-sm-4"></div>
-        </div>
-    </div>
-    <h3 id="becentered"> Choisissez celle qui vous convient </h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <p>BESOIN PONCTUEL: 16€/HEURE APRÈS CRÉDIT D'IMPÔTS</p>
-            </div>
-            <div class="col-sm-4">
-                <p>PACK 10H: 14€/HEURE, SOIT 140€ APRÈS CRÉDIT D'IMPÔTS</p>
-            </div>
-            <div class="col-sm-4">
-                <p>PACK 20H: 12€/HEURE, SOIT 240€ APRÈS CRÉDIT D'IMPÔTS</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>32€</p>
-            </div>
-            <div class="col-sm-4">
-                <p>280€</p>
-            </div>
-            <div class="col-sm-4">
-                <p>480€</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>Un besoin ponctuel, ou simplement envie de tester Nobo? Commandez le nombre d'heures souhaitées, et échangez vos corvées contre une séance de ciné! Attention 2h minimum par prestation. 16€/heure après défiscalisation soit 32€ tout de suite, et 16€ d'économies sur vos impôts! De quoi offrir un joli bouquet de fleur à belle maman. Inclus: ménage, repassage, bricolage, livraison de courses, jardinage, gardiennage et même prendre soin de votre animal de compagnie.</p>
-        </div>
-        <div class="col-sm-4">
-            <p>Plus envie de perdre du temps à faire ce que vous détestez? Avec le pack 10 heures, vous allez enfin pouvoir vous remettre au sport! 14€/heure après défiscalisation soit 280€ tout de suite, et 140€ d'économies sur vos impôts! Pile de quoi changer de lunettes de soleil pour crâner l'été prochain à St-Tropez. Durée de vie du pack: illimitée. Inclus: ménage, repassage, bricolage, livraison de courses, jardinage, gardiennage et même prendre soin de votre animal de compagnie.</p>
-        </div>
-        <div class="col-sm-4">
-            <p>Accro à Nobo?! Avec le pack 20 heures, vous vous sentirez en vacances toute l'année! 12€/heure après défiscalisation soit 480€ tout de suite, et 240€ d'économies sur vos impôts! Pile de quoi s'offrir un week end à Rome. Durée de vie du pack: illimitée. Inclus: ménage, repassage, bricolage, livraison de courses, jardinage, gardiennage et même prendre soin de votre animal de compagnie.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <!-- <span class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Quantité
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li>1</li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                </ul>
-            </span> -->
-            <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-        </div>
-        <div class="col-sm-4">
-            <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-        </div>
-        <div class="col-sm-4">
-            <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-        </div>
-    </div>
-    </div>
+
     <ui-view></ui-view>
+    
 </body>
