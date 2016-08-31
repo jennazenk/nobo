@@ -10,15 +10,19 @@
 <h3 id="becentered"> Choisissez celle qui vous convient </h3>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
-            <p>BESOIN PONCTUEL: 16€/HEURE APRÈS CRÉDIT D'IMPÔTS</p>
-        </div>
-        <div class="col-sm-4">
-            <p>PACK 10H: 14€/HEURE, SOIT 140€ APRÈS CRÉDIT D'IMPÔTS</p>
-        </div>
-        <div class="col-sm-4">
-            <p>PACK 20H: 12€/HEURE, SOIT 240€ APRÈS CRÉDIT D'IMPÔTS</p>
-        </div>
+        <form>
+            <div class="col-sm-4">
+                <input ng-model="offer" type="radio" name="editList" value="Besoin ponctuel">BESOIN PONCTUEL: 16€/HEURE APRÈS CRÉDIT D'IMPÔTS
+                <br>
+            </div>
+            <div class="col-sm-4">
+                <input ng-model="offer" type="radio" name="editList" value="Pack 10h">PACK 10H: 14€/HEURE, SOIT 140€ APRÈS CRÉDIT D'IMPÔTS
+                <br>
+            </div>
+            <div class="col-sm-4">
+                <input ng-model="offer" type="radio" name="editList" value="Pack 20h">PACK 20H: 12€/HEURE, SOIT 240€ APRÈS CRÉDIT D'IMPÔTS
+            </div>
+        </form>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -43,7 +47,7 @@
         <p>Accro à Nobo?! Avec le pack 20 heures, vous vous sentirez en vacances toute l'année! 12€/heure après défiscalisation soit 480€ tout de suite, et 240€ d'économies sur vos impôts! Pile de quoi s'offrir un week end à Rome. Durée de vie du pack: illimitée. Inclus: ménage, repassage, bricolage, livraison de courses, jardinage, gardiennage et même prendre soin de votre animal de compagnie.</p>
     </div>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-sm-4">
         <select ng-model="quantity1" ng-options="x for x in quantities">
         </select>
@@ -59,9 +63,50 @@
         </select>
         <button type="button" class="btn btn-success">Ajouter à mon panier</button>
     </div>
+</div> -->
+<br>
+<br>
+<div class="row" ng-if="offer">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <h3> Vous avez choisi l'offre : {{offer}} </h3>
+        <br>
+    </div>
+</div>
+<div class="row" ng-if="offer">
+    <div class="col-sm-4">
+        <h4>Quelle quantité souhaitez-vous acheter ?</h4>
+    </div>
 </div>
 <br>
 <br>
-<div id="becentered">
-    <button type="button" class="btn btn-primary">Procéder au checkout</button>
+<div class="row" ng-if="offer">
+    <div class="col-sm-6">
+        <h5 id="beinline">{{offer}}</h5>
+        <select id="beinline" ng-options="x for x in quantities" value="{{x}}" ng-model="quantity">
+        </select>
+        <br>
+        <br>
+        <div>
+            <h4 ng-if="quantity"> Total : {{quantity}} x {{offers[offer]}}€  = {{quantity * offers[offer]}} </h4>
+        </div>
+    </div>
+</div>
+<br>
+<div>
+    <button ng-click="checkoutMode=true" type="button" class="btn btn-primary">Procéder au checkout</button>
+</div>
+<h1>{{checkoutMode}}</h1>
+<br>
+<br>
+<div ng-if="checkoutMode">
+    <form>
+        <div class="input-group">
+            <input ng-model="client.name" type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1">
+            <input ng-model="client.firstname" type="text" class="form-control" placeholder="Prénom" aria-describedby="basic-addon1">
+            <input ng-model="client.email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+            <input ng-model="client.phone" type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+        </div>
+    </form>
 </div>

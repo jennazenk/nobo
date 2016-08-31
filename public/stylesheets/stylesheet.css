@@ -11,3 +11,11 @@ p {
    text-align: justify;
    text-justify: inter-word;
 }
+
+/*input[type="radio"] {
+    margin-left:10px;
+}*/
+
+#beinline {
+	display: inline;
+}
