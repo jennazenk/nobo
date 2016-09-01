@@ -47,23 +47,6 @@
         <p>Accro à Nobo?! Avec le pack 20 heures, vous vous sentirez en vacances toute l'année! 12€/heure après défiscalisation soit 480€ tout de suite, et 240€ d'économies sur vos impôts! Pile de quoi s'offrir un week end à Rome. Durée de vie du pack: illimitée. Inclus: ménage, repassage, bricolage, livraison de courses, jardinage, gardiennage et même prendre soin de votre animal de compagnie.</p>
     </div>
 </div>
-<!-- <div class="row">
-    <div class="col-sm-4">
-        <select ng-model="quantity1" ng-options="x for x in quantities">
-        </select>
-        <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-    </div>
-    <div class="col-sm-4">
-        <select ng-model="quantity2" ng-options="x for x in quantities">
-        </select>
-        <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-    </div>
-    <div class="col-sm-4">
-        <select ng-model="quantity3" ng-options="x for x in quantities">
-        </select>
-        <button type="button" class="btn btn-success">Ajouter à mon panier</button>
-    </div>
-</div> -->
 <br>
 <br>
 <div class="row" ng-if="offer">
@@ -89,24 +72,35 @@
         <br>
         <br>
         <div>
-            <h4 ng-if="quantity"> Total : {{quantity}} x {{offers[offer]}}€  = {{quantity * offers[offer]}} </h4>
+            <h4 ng-if="quantity"> Total : {{quantity}} x {{offers[offer]}}€  = {{quantity * offers[offer]}}€ </h4>
         </div>
+        <div>
+            <button ng-click="checkoutMode===true" type="button" class="btn btn-primary">Procéder au checkout</button>
+        </div>
+        <h1>{{quantity}}</h1>
     </div>
 </div>
 <br>
-<div>
-    <button ng-click="checkoutMode=true" type="button" class="btn btn-primary">Procéder au checkout</button>
-</div>
-<h1>{{checkoutMode}}</h1>
 <br>
 <br>
 <div ng-if="checkoutMode">
     <form>
-        <div class="input-group">
-            <input ng-model="client.name" type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1">
-            <input ng-model="client.firstname" type="text" class="form-control" placeholder="Prénom" aria-describedby="basic-addon1">
-            <input ng-model="client.email" type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-            <input ng-model="client.phone" type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+        <div class="form-group">
+            <label for="inputName">Nom</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nom">
         </div>
+        <div class="form-group">
+            <label for="inputFirstName">Prénom</label>
+            <input type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="inputPhone">Numéro de téléphone</label>
+            <input type="number" class="form-control" id="inputPhone" placeholder="Numéro de téléphone">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
