@@ -9,12 +9,7 @@ var Orders = db.model('orders');
 
 module.exports = router;
 
-router.use('/neworder', require('./neworder'));
-
-// router.get('/', function(req, res, next) {
-// 	console.log('Got here');
-// 	res.sendStatus(200);
-// })
+router.use('/checkout', require('./checkout'));
 
 router.use(function(req, res) {
 	res.status(404).end();

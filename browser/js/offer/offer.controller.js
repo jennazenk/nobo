@@ -10,8 +10,6 @@ nobo.controller('OfferCtrl', function($scope, $state) {
         "Pack 20h": 480
     }
 
-    $scope.checkoutMode = false;
-
     $scope.$watch('offer', function() {
         if ($scope.offer === "Besoin ponctuel") {
             $scope.quantities = [2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -20,4 +18,7 @@ nobo.controller('OfferCtrl', function($scope, $state) {
         }
     })
 
+    $scope.checkout = function() {
+        $state.go('checkoutState');
+    }
 });

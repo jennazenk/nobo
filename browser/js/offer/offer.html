@@ -75,15 +75,14 @@
             <h4 ng-if="quantity"> Total : {{quantity}} x {{offers[offer]}}€  = {{quantity * offers[offer]}}€ </h4>
         </div>
         <div>
-            <button ng-click="checkoutMode===true" type="button" class="btn btn-primary">Procéder au checkout</button>
+            <button ng-click="checkout()" type="button" class="btn btn-primary">Procéder au checkout</button>
         </div>
-        <h1>{{quantity}}</h1>
     </div>
 </div>
 <br>
 <br>
 <br>
-<div ng-if="checkoutMode">
+<!-- <div ng-if="checkoutMode">
     <form>
         <div class="form-group">
             <label for="inputName">Nom</label>
@@ -103,4 +102,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-</div>
+</div> -->

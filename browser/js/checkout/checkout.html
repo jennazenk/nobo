@@ -2,20 +2,20 @@
     <form>
         <div class="form-group">
             <label for="inputName">Nom</label>
-            <input type="text" class="form-control" id="inputName" placeholder="Nom">
+            <input ng-model="data.name" type="text" class="form-control" id="inputName" placeholder="Nom">
         </div>
         <div class="form-group">
             <label for="inputFirstName">Prénom</label>
-            <input type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
+            <input ng-model="data.lastName" type="text" class="form-control" id="inputFirstName" placeholder="Prénom">
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input ng-model="data.email" type="email" class="form-control" id="inputEmail" placeholder="Email">
         </div>
         <div class="form-group">
             <label for="inputPhone">Numéro de téléphone</label>
-            <input type="number" class="form-control" id="inputPhone" placeholder="Numéro de téléphone">
+            <input ng-model="data.phone" type="number" class="form-control" id="inputPhone" placeholder="Numéro de téléphone">
         </div>
-        <button ng-submit="sendForm" type="submit" class="btn btn-primary">Login</button>
+        <button ng-click="sendForm(data)" class="btn btn-primary">Procéder au paiement</button>
     </form>
 </div>
